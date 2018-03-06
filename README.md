@@ -34,3 +34,12 @@
    1. go to your fork on GitHub
    2. If you do this fast enough, GitHub will probably show you a link with the name of your branch, asking if you want to create a Pull Request.  If not, on the left, near the top, there will be a drop down called "Branch: master", if you click on it, you can find your branch "add-file" and then click the button next to it "New pull request"
    3. In the next window select "Create Pull Request"
+6. Once your PR is approved, update your repository to be in sync with the project
+   1. Update your local copy
+     * git checkout master
+     * git fetch upstream
+     * git merge upstream/master
+     * this series of commands makes you are on your local master branch, gets all changes from the main project (upstream) and then merges the changes from upstream's master into your master
+   2. Update your fork on GitHub to be in sync with your local copy
+     * git push origin
+     * this sends all changes from your local master, to your GitHub's master
