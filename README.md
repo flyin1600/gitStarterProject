@@ -6,10 +6,17 @@
   1. When you clone, use ssh, not https
   2. Use this link for instructions on how to set up your ssh keys with GitHub: https://help.github.com/articles/connecting-to-github-with-ssh/
 3. Create a new file in your local copy of the repo called YourTest.py
-  1. git checkout -b add-file
+  1. git log
+    1. this command shows you the commit history of the repository. It will show you important tags (branch names) such as where you currently are, called HEAD, and what your current branch is called (eg: HEAD -> master)
+  2. git checkout -b add-file
     1. this created a new branch for your work called "add-file"
-  2. In this file define a class called YourClass
-  3. Using the git command line tools, add this new file to your repository
+  3. git log
+    1. notice that the output has changed, instead of HEAD -> master, you now should see HEAD -> add-file.  you should also see "master" on the same line, because you have not made any changes, master and add-files refer to the same place in your repository's change timeline
+  4. git branch
+    1. this command will show you all of the branches in your repository, your currently active branch will have a *
+  5. create a file called YourTest.py
+  6. In this file define a class called YourClass
+  7. Using the git command line tools, add this new file to your repository
     1. git status
       1. this will show you that your new file is currently *untracked*, or not in the repository
     2. git add YourClass.py
